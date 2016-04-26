@@ -240,6 +240,7 @@ class Converter:
                 # Give some additional params if we need to open a CSV file
                 props.append(('FilterFlags', '59,34,76,1'))
                 #props.append(('FilterData', 'Any'))
+            props.append(('UseLosslessCompression','true'))
             self.doc = self.oo.loadComponentFromURL(self.docUrl, "_blank", 0,
                                                     self.props(props))
             # Perform additional tasks for odt documents
